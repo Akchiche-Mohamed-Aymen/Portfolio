@@ -1,0 +1,94 @@
+
+body{
+    background-image: url('./assets/herobg.png');
+    width: 100vw;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    @apply pb-5
+}
+nav{
+    position : fixed;
+    top : 0;
+    z-index :  100;
+}
+nav a:hover{
+    @apply px-2 bg-violet-600 rounded
+}
+
+form{
+    @apply max-w-80 w-full p-3 rounded-xl;
+    label{
+        @apply block text-white my-2 w-full
+    }
+    input , textarea {
+        @apply bg-violet-800 border-none outline-none px-3 py-2 text-white w-full rounded  
+    }
+    textarea{
+        @apply h-48 resize-none;
+    }
+}
+.bars p , .bars1 p{
+    @apply h-1 w-9 bg-white rounded
+}
+.bars1 p:first-child{
+    @apply absolute ;
+    top : 10px;
+    rotate: -45deg;
+}
+.bars1 p:last-child{
+    @apply absolute;
+    top: 10px;
+    rotate:45deg;
+}
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #FFF;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    position: relative;
+    animation: pulse 1s linear infinite;
+  }
+  .loader:after {
+    content: '';
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    border: 5px solid  rgba(0, 0, 255, 0.817);
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: scaleUp 1s linear infinite;
+  }
+  
+  @keyframes scaleUp {
+    0% { transform: translate(-50%, -50%) scale(0) }
+    60% , 100% { transform: translate(-50%, -50%)  scale(1)}
+  }
+  @keyframes pulse {
+    0% , 60% , 100%{ transform:  scale(1) }
+    80% { transform:  scale(1.2)}
+  }
+
+  @keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.card {
+    animation: slideInFromLeft 0.5s ease-out;
+}
+.skill:hover img {
+    @apply  duration-1000 animate-spin	
+    }
+
