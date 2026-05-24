@@ -3,6 +3,7 @@ import athan from "./assets/projectsImg/athan.jpg"
 import tawasol from "./assets/projectsImg/tawasol.jpg"
 import axely from "./assets/axely.png"
 import clear from "./assets/clear.png"
+import ferroja from "./assets/ferroja.png"
 export const projects = [
   {
     image : axely,
@@ -18,6 +19,13 @@ export const projects = [
     demo : 'https://clearpath-pfe.netlify.app/' ,
     title : 'ClearPath Business Consulting',
     description : `ClearPath is a professional business consulting and financial services platform targeted at small to medium-sized enterprises. `
+  },
+  {
+    image : ferroja,
+    gitLink : null,
+    demo : 'https://full-app-888.netlify.app/' ,
+    title : 'Ferroja Real Estate',
+    description : `This is a full-stack mobile-first marketplace web application . The platform connects creators and service providers with customers for buying and selling products and services, with a strong focus on local/location-based discovery.`
   },
   {
     image : todo,
